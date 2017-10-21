@@ -1,7 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void randomStarSpace();
 void binaryMatrix();
+void randomChars();
 
 int main()
 {
@@ -13,6 +15,8 @@ int main()
         case 1 : randomStarSpace();
             break;
 		case 2 : binaryMatrix();
+			break;
+		case 2 : randomChars();
 			break;
 		default : printf("Invalid option");
     }
@@ -31,5 +35,12 @@ void binaryMatrix(){
 	for(i = 0; ; i++){
 		int r = rand() % 2;
 		printf("%c", r == 0 ? '0' : '1');
+	}
+}
+
+void randomChars(){
+    int i;
+	for(i = 0; ; i++){
+		printf("%c", rand());
 	}
 }
